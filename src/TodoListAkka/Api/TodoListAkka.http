@@ -1,0 +1,45 @@
+@TodoListAkka_HostAddress = http://localhost:5101
+
+GET {{TodoListAkka_HostAddress}}/tasks
+Accept: application/json
+
+###
+
+
+### Add a new task
+POST {{TodoListAkka_HostAddress}}/tasks
+Content-Type: application/json
+
+{
+  "taskId": "task1",
+  "description": "This is my first task"
+}
+
+### Add another task
+POST {{TodoListAkka_HostAddress}}/tasks
+Content-Type: application/json
+
+{
+  "taskId": "task2",
+  "description": "This is my second task"
+}
+
+### Get all tasks
+GET {{TodoListAkka_HostAddress}}/tasks
+
+### Get a specific task
+GET {{TodoListAkka_HostAddress}}/tasks/task3
+
+### Update a task
+PUT {{TodoListAkka_HostAddress}}/tasks/task1
+Content-Type: application/json
+
+{
+  "description": "Updated description for task1"
+}
+
+### Delete a task
+DELETE {{TodoListAkka_HostAddress}}/tasks/task1
+
+### Get all tasks again to verify deletion
+GET {{TodoListAkka_HostAddress}}/tasks

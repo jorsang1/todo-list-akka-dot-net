@@ -1,0 +1,12 @@
+﻿<Solution>
+  <Folder Name="/SolutionFolder/">
+    <File Path="README.md" />
+    <File Path=".gitignore" />
+  </Folder>
+  <Folder Name="/src/">
+    <Project Path="src\TodoListAkka\TodoListAkka.csproj" />
+  </Folder>
+  <Folder Name="/tests/">
+    <Project Path="tests\TodoListAkka.Tests\TodoListAkka.Tests.csproj" Type="Classic C#" />
+  </Folder>
+</Solution>
